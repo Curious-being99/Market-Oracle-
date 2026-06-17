@@ -1,11 +1,41 @@
-<div align="center">
+# Institutional Market Sentiniel & Analysis Engine
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+This repository contains a high-fidelity market research and hypothesis modeling engine. It utilizes real-time WebSocket ingestion, advanced neural network processing (MLP/mLL), and natural language processing (NLP) to provide institutional-grade tape analysis.
 
-  <h1>Built with AI Studio</h2>
+## Core Features
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **Real-Time Data Ingestion:** Synchronous connections to high-liquidity market feeds (Pyth, Binance, Gate.io).
+- **Neural Pipeline (mLL/MLP):** Continuous online backpropagation of ticker data to predict institutional posture and bias.
+- **NLP Analysis:** Deep analysis of market narratives and user queries using a custom linguistic engine.
+- **Full-Stack Architecture:** Node.js/Express backend with a responsive React frontend.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Getting Started
 
-</div>
+### Prerequisites
+- Node.js (v20+)
+- npm
+
+### Installation
+```bash
+npm install
+```
+
+### Running in Development
+```bash
+npm run dev
+```
+
+### Building for Production
+```bash
+npm run build
+```
+This will bundle the frontend and compile the backend into `dist/server.cjs`.
+
+### Running in Production
+```bash
+npm start
+```
+
+## Architecture
+
+Please see `ARCHITECTURE.md` for a detailed technical breakdown.

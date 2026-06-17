@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sovereign Market Oracle</title>
+    <script>
+      // Squelch benign and expected Vite websocket HMR connection rejection alerts in client frame
+      window.addEventListener('unhandledrejection', function (event) {
+        if (event.reason && (
+          (event.reason.message && event.reason.message.includes('WebSocket')) ||
+          (event.reason.message && event.reason.message.includes('websocket')) ||
+          (String(event.reason).includes('WebSocket')) ||
+          (String(event.reason).includes('websocket')) ||
+          (String(event.reason).includes('opened'))
+        )) {
+          console.warn('[Vite WebSocket Suppressed]:', event.reason);
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      }, true);
+
+      window.addEventListener('error', function (event) {
+        if (event.message && (
+          event.message.includes('WebSocket') ||
+          event.message.includes('websocket') ||
+          event.message.includes('opened')
+        )) {
+          console.warn('[Vite WebSocket Error Suppressed]:', event.message);
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

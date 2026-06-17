@@ -1,0 +1,6 @@
+{
+  "name": "Curiousbeing Market Oracle",
+  "description": "Advanced Forex and Index order flow analysis dashboard with visual Depth of Market (DOM), Cumulative Volume Delta (CVD), Footprint charts, and AI-powered sentinel insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
